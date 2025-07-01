@@ -8,5 +8,6 @@ namespace Practice1.Entities.Base
     public abstract class Thing
     {
         public int Id { get; set; }
+        public  DateOnly? Date { get; set; }
     }
 }
