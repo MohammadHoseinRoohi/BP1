@@ -19,8 +19,11 @@ namespace Practice1.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     Writer = table.Column<string>(type: "TEXT", nullable: true),
+                    Translator = table.Column<string>(type: "TEXT", nullable: true),
                     Publisher = table.Column<string>(type: "TEXT", nullable: true),
-                    Price = table.Column<double>(type: "REAL", nullable: false)
+                    Genre = table.Column<string>(type: "TEXT", nullable: true),
+                    Price = table.Column<double>(type: "REAL", nullable: false),
+                    Date = table.Column<DateOnly>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -35,7 +38,12 @@ namespace Practice1.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Firstname = table.Column<string>(type: "TEXT", nullable: false),
                     Lastname = table.Column<string>(type: "TEXT", nullable: false),
-                    Gender = table.Column<int>(type: "INTEGER", nullable: false)
+                    Gender = table.Column<int>(type: "INTEGER", nullable: false),
+                    PhoneNumber = table.Column<double>(type: "REAL", nullable: false),
+                    Password = table.Column<double>(type: "REAL", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: true),
+                    Username = table.Column<string>(type: "TEXT", nullable: true),
+                    Date = table.Column<DateOnly>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,7 +59,8 @@ namespace Practice1.Migrations
                     BookId = table.Column<int>(type: "INTEGER", nullable: false),
                     MemberId = table.Column<int>(type: "INTEGER", nullable: false),
                     BorrowTime = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ReturnTime = table.Column<DateTime>(type: "TEXT", nullable: true)
+                    ReturnTime = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    Date = table.Column<DateOnly>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

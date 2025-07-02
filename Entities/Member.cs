@@ -12,10 +12,9 @@ namespace Practice1.Entities
         public required string Firstname { get; set; }
         public required string Lastname { get; set; }
         public required Gender Gender { get; set; }
-        public string? Email { get; set; }
         public double PhoneNumber { get; set; }
         public double Password { get; set; }
+        public string? Email { get; set; }
         public string? Username { get; set; }
-
     }
 }

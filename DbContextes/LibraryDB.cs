@@ -16,7 +16,7 @@ namespace Practice1.DbContextes
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlite(@"Data source=DBFiles\librarydb.sqlite");
+            optionsBuilder.UseSqlite(@"Data source = DBFiles\librarydb.sqlite");
         }
     }
 }

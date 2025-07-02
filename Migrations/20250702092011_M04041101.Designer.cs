@@ -11,7 +11,7 @@ using Practice1.DbContextes;
 namespace Practice1.Migrations
 {
     [DbContext(typeof(LibraryDB))]
-    [Migration("20250701221850_M04041101")]
+    [Migration("20250702092011_M04041101")]
     partial class M04041101
     {
         /// <inheritdoc />
@@ -26,6 +26,12 @@ namespace Practice1.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateOnly?>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("TEXT");
+
                     b.Property<double>("Price")
                         .HasColumnType("REAL");
 
@@ -34,6 +40,9 @@ namespace Practice1.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Translator")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Writer")
@@ -54,6 +63,9 @@ namespace Practice1.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("BorrowTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateOnly?>("Date")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("MemberId")
@@ -77,6 +89,12 @@ namespace Practice1.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<DateOnly?>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Firstname")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -86,6 +104,15 @@ namespace Practice1.Migrations
 
                     b.Property<string>("Lastname")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Password")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("PhoneNumber")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Username")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
