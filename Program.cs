@@ -54,5 +54,44 @@ app.MapDelete("api/v1/books/remove/{id}", (int id) =>
     db.SaveChanges();
     return "Book Removed!";
 });
-
+app.MapPost("api/v1/members/create", (Member member) =>
+{
+    using var db = new LibraryDB();
+    db.Members.Add(member);
+    db.SaveChanges();
+});
+app.MapGet("api/v1/members/list", () =>
+{
+    using var db = new LibraryDB();
+    return db.Members.ToList();
+});
+app.MapPut("api/v1/members/update/{id}", (int id , Member member) =>
+{
+    using var db = new LibraryDB();
+    var m = db.Members.Find(id);
+    if (m == null)
+    {
+        return "Book Not found!!!!";
+    }
+    m.Firstname = member.Firstname;
+    m.Lastname = member.Lastname;
+    m.PhoneNumber = member.PhoneNumber;
+    m.Password = member.Password;
+    m.Email = member.Email;
+    m.Username = member.Username;
+    db.SaveChanges();
+    return "The Operation Was Successful.!";
+});
+app.MapDelete("api/v1/members/remove/{id}", (int id) =>
+{
+    using var db = new LibraryDB();
+    var member = db.Members.Find(id);
+    if (member == null)
+    {
+        return "Your Account Has Been Deleted.";
+    }
+    db.Members.Remove(member);
+    db.SaveChanges();
+    return "Book Removed!";
+});
 app.Run();

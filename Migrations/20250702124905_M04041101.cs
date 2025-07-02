@@ -38,7 +38,6 @@ namespace Practice1.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Firstname = table.Column<string>(type: "TEXT", nullable: false),
                     Lastname = table.Column<string>(type: "TEXT", nullable: false),
-                    Gender = table.Column<int>(type: "INTEGER", nullable: false),
                     PhoneNumber = table.Column<double>(type: "REAL", nullable: false),
                     Password = table.Column<double>(type: "REAL", nullable: false),
                     Email = table.Column<string>(type: "TEXT", nullable: true),

@@ -11,7 +11,7 @@ using Practice1.DbContextes;
 namespace Practice1.Migrations
 {
     [DbContext(typeof(LibraryDB))]
-    [Migration("20250702092011_M04041101")]
+    [Migration("20250702124905_M04041101")]
     partial class M04041101
     {
         /// <inheritdoc />
@@ -98,9 +98,6 @@ namespace Practice1.Migrations
                     b.Property<string>("Firstname")
                         .IsRequired()
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("Gender")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Lastname")
                         .IsRequired()

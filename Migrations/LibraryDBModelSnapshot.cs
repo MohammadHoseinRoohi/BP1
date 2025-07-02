@@ -96,9 +96,6 @@ namespace Practice1.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Gender")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Lastname")
                         .IsRequired()
                         .HasColumnType("TEXT");
